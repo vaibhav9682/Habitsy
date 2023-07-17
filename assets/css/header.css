@@ -1,0 +1,55 @@
+/* Header */
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0rem 2rem; */
+  box-shadow: rgba(11, 68, 121, 0.1) 0px 10px 15px -3px,
+    rgba(117, 164, 236, 0.05) 0px 4px 6px -2px;
+  background-color: white;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+}
+.headerContainer p {
+  font-weight: bolder;
+}
+.leftSection {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2rem;
+}
+.headOpts {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+a {
+  text-decoration: none;
+}
+
+.rigthSection {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.font p {
+  color: gray;
+}
+.green {
+  color: rgb(48, 85, 48);
+}
+
+.greenBack {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: rgb(48, 85, 48);
+  color: white;
+  border-radius: 5px;
+}
+.domain {
+  font-family: serif;
+  font-size: 2rem;
+}

@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/css/dashboard.css">
+
+
+<div class="mainWrapper" id="blur">
+
+    <h1>Dashboard</h1>
+
+    <ul>
+        <%for(habit of habits){%>
+            <li>
+                <div class="habit-list">
+                    <a href="/users/track/<%=habit._id%>">
+                        <p>
+                            <%= habit.name %>
+                        </p>
+
+                    </a>
+                    <p>
+                        <%=habit.about%>
+                    </p>
+                    <a href="/habit/delete/<%=habit._id%>">
+                        <img src="/image/delete.png" alt="">
+                    </a>
+
+                </div>
+
+            </li>
+
+            <%}%>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="plus">
+        <a href="/habit/form" id="habitForm" onclick="toggle()">
+            <p>+</p>
+        </a>
+    </div>
+</div>
+<div id="form">
+
+
+</div>
+
+<script src="/js/habit.js"></script>

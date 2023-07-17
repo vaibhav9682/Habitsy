@@ -1,0 +1,11 @@
+footer {
+  height: 5vh;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  padding-left: 2%;
+  background: hsl(194, 18%, 76%);
+  display: flex;
+  align-items: center;
+  z-index: 4;
+}

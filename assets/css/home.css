@@ -1,0 +1,37 @@
+#home {
+  background-image: url("/image/home.jpg");
+  height: 100%;
+}
+
+.home-text {
+  position: relative;
+  top: 10%;
+  left: 10%;
+}
+
+.home-text p{
+ 
+  font-size: 4rem;
+   
+}
+.home-text h1 {
+  color: #3498db;
+  font-family: serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 5rem;
+  position: relative;
+  /* left: 5%; */
+}
+.home-text h2 {
+  font-family: serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2rem;
+  position: relative;
+  top: -4rem;
+  left: 5rem;
+}
+/* .innerSignup {
+  position: sticky;
+} */

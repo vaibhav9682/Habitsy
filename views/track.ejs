@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="/css/track.css">
+
+<div class="discription">
+    <div class="h-name">
+        <p>Habit &nbsp&nbsp:&nbsp &nbsp &nbsp <%=habit.name%>
+        </p>
+        <p>
+            About&nbsp&nbsp:&nbsp &nbsp &nbsp <%=habit.about%>
+        </p>
+    </div>
+
+    <a href="/users/dashboard">
+        <p class="back">Back</p>
+    </a>
+
+
+
+</div>
+
+
+<div class="monthContainer">
+    <h1 id="monthDisplay">January</h1>
+</div>
+<div class="calender">
+
+    <div class="days-container">
+        <%for(day of days){%>
+
+            <div class="eachDay">
+                <%=day%>
+            </div>
+
+            <%}%>
+    </div>
+
+    <div class="days-container date-container" id="date-container" onscroll="changeMonth()">
+        <%for(month of months){%>
+            <%let count=31%>
+                <%let val=thirty.includes(month)%>
+                    <%if(val){%>
+                        <% count=30%>
+                            <%}else if(month=='February' ){%>
+                                <%count=28%>
+                                    <%}%>
+
+                                        <%for(i=1; i<=count; i++){%>
+                                            <%let status='none' %>
+                                                <%for(day of dayArray){%>
+
+                                                    <%if(day.date==i && day.month==month){%>
+                                                        <%status=day.status%>
+                                                            <%}%>
+
+                                                                <%}%>
+
+                                                                    <a href="/habit/day?habit=<%=habit.id%>&month=<%=month%>&date=<%=i%>"
+                                                                        class="displayDate">
+
+                                                                        <div class="eachDate" <%if(i==1){%>
+                                                                            id = "startDate"
+                                                                            <%}%>
+                                                                                >
+                                                                                <div>
+                                                                                    <p>
+                                                                                        <%=i%>
+                                                                                    </p>
+                                                                                </div>
+
+
+                                                                                <div id=<%=habit.id+i+month%>
+                                                                                    >
+                                                                                    <%if(status=='done' ){%>
+                                                                                        <img src="/image/tick.png"
+                                                                                            alt="done">
+                                                                                        <%}else if(status=='notDone'
+                                                                                            ){%>
+                                                                                            <img src="/image/cross.png"
+                                                                                                alt="notDone">
+                                                                                            <%}%>
+                                                                                </div>
+
+                                                                        </div>
+                                                                    </a>
+                                                                    <%}%>
+
+                                                                        <%}%>
+
+
+    </div>
+
+    <div class="scroll">
+        <img src="/image/arrow.png" alt="arrow png">
+    </div>
+
+</div>
+
+<script src="/js/track.js"></script>

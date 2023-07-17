@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<div id="home">
+    <div class="home-text">
+        <%if(locals.user){%>
+            <p>
+                Hi, <%=locals.user.name.split(' ')[0]%>
+            </p>
+            <%}else{%>
+                <p>Hello buddy...</p>
+                <%}%>
+                <h1>Build</h1>
+                <h2>your habits..</h2>
+    </div>
+
+    <div id="formContainer">
+
+
+    </div>
+</div>
+
+
+<script src="/js/header.js"></script>

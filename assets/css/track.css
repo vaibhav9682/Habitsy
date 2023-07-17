@@ -1,0 +1,124 @@
+.discription {
+  margin: auto;
+  border-radius: 15px;
+  width: 90vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  margin-bottom: -10px;
+  background-image: linear-gradient(
+    to left,
+    rgba(248, 247, 247, 0),
+    rgba(21, 104, 129, 0.952)
+  );
+}
+.back {
+  color: red;
+}
+.calender {
+  margin: auto;
+  height: auto;
+  width: 98vw;
+}
+/* habdleing days */
+.days-container {
+  /* border: 1px solid rgb(194, 31, 145); */
+
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+}
+.eachDay {
+  background-color: rgb(42, 152, 160);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid rgb(180, 180, 180);
+}
+
+/* habdleing dates */
+
+.date-container {
+  border-radius: 15px;
+  height: 55vh;
+  width: 100%;
+  overflow: auto;
+  z-index: 4;
+  box-shadow: rgba(127, 207, 221, 0.425) 0px -50px 36px -28px inset;
+}
+.date-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  margin: auto;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0% {
+    top: 0px;
+    buttom: 0px;
+  }
+  10% {
+    top: 0px;
+    buttom: 0px;
+  }
+  20% {
+    top: 0px;
+    buttom: 0px;
+  }
+  70% {
+    top: 0px;
+    buttom: 0px;
+  }
+  90% {
+    top: 30px;
+    buttom: 0px;
+  }
+  100% {
+    buttom: 30px;
+    top: 0px;
+  }
+}
+
+.scroll img {
+  width: 100%;
+}
+.eachDate {
+  height: 10vh;
+  font: bold;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid rgb(180, 180, 180);
+  color: black;
+}
+#startDate {
+  background-color: rgba(102, 179, 231, 0.315);
+}
+.monthContainer {
+  text-align: center;
+}
+
+.status {
+  width: 50px;
+}
+.status img {
+  width: 100%;
+}

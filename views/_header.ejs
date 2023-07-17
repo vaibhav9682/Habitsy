@@ -1,0 +1,58 @@
+<header class="headerContainer">
+    <div class="leftSection">
+        <h2 class="domain green">
+            <a href="/">habitsy</a>
+
+        </h2>
+        <div class="headOpts font">
+            <a href="https://www.chopchopfamily.org" target="_blank">
+                <p>Health</p>
+            </a>
+            <a href="https://zapier.com/blog/daily-routines/" target="_blank">
+                <p>Routine</p>
+            </a>
+            <a href="/habitsy/about">
+                <p>About</p>
+            </a>
+            <% if(locals.user){%>
+                <a href="/users/dashboard">
+                    <p>
+                        Dashboard
+                    </p>
+                </a>
+
+                <%}%>
+
+        </div>
+    </div>
+
+    <div class="rigthSection ">
+
+        <%if(locals.user){%>
+            <div>
+                <a href="/users/profile" id="signUp">
+                    <p class="green">Hi <%=locals.user.name.split(' ')[0]%>
+                    </p>
+                </a>
+            </div>
+            <div>
+                <a href="/users/logout" id="signUp">
+                    <p class="greenBack">Log Out</p>
+                </a>
+            </div>
+            <%}else{%>
+                <div>
+                    <a href="/users/signup" id="signUp">
+                        <p class="green"> Sign Up</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="/users/signin" id="signIn">
+                        <p class="greenBack"> Sign in</p>
+                    </a>
+                </div>
+                <% }%>
+
+
+    </div>
+</header>

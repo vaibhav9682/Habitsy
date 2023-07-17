@@ -1,0 +1,36 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 20%;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 30%;
+  right: 40%;
+  /* background-color: #fffdfd57; */
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: start;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.336);
+  border: none;
+  width: 100%;
+  height: 35px;
+  font-size: 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+input:focus {
+  outline: none;
+}
+input[type="submit"] {
+  background-color: rgb(48, 85, 48);
+  color: white;
+  width: 50%;
+}
