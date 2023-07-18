@@ -1,7 +1,8 @@
 h1 {
   text-align: center;
   color: cadetblue;
-  margin-top: 5%;
+  width: auto;
+  margin-top: 8%;
 }
 
 .info {
@@ -13,4 +14,19 @@ h1 {
   background-color: aliceblue;
   height: 15vh;
   padding: 20px;
+}
+.text {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  /* border: 1px solid red; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  text-align: justify;
+  font-style: italic;
+  word-spacing: 5px;
+  color: grey;
+}
+.text p::first-letter {
+  font-size: 3rem;
 }

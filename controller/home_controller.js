@@ -3,3 +3,6 @@ module.exports.home = (req, res) => {
         toggle: req.params.toggle
     })
 }
+module.exports.about = (req, res) => {
+    return res.render('about')
+}

@@ -1,7 +1,7 @@
 footer {
   height: 5vh;
   width: 100%;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   padding-left: 2%;
   background: hsl(194, 18%, 76%);
