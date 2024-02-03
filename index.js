@@ -1,6 +1,7 @@
+require('dotenv').config();
 const express = require('express')
 const app = express();
-const port = 3000;
+const port = process.env.portEnv;
 const expressLayouts = require('express-ejs-layouts')
 const db = require('./config/mongoose')
 const cookieParser = require('cookie-parser');
@@ -41,20 +42,20 @@ app.set('views', './views');
 
 // mongo store is used to store the session cookie in db
 app.use(session({
-    name: 'codial',
+    name: process.env.session_cookie_name,
     // todo change secret before deploying on server
-    secret: 'codeman',
+    secret: process.env.session_cookie_secret,
     saveUninitialized: false,
     resave: false,
     cookie: {
-        maxAge: (1000 * 60 * 100)   
+        maxAge: (1000 * 60 * 100)
     }
     ,
 
     store: new MongoStore(
         {
 
-            uri: 'mongodb://127.0.0.1:27017/habit-tracker',
+            uri: process.env.mongoDb_url,
             autoRemove: 'disabled'
 
         },
